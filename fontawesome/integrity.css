@@ -1,0 +1,77 @@
+#navbar-change {
+    background: rgba(0, 0, 0, 0.6);
+}
+.nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+#icons {
+    list-style-type: none;
+}
+#icons li {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#icons li .fa-facebook {
+    color: blue;
+    font-size: 20px;
+}
+#icons li .fa-instagram {
+    color: rgb(112, 7, 7);
+    font-size: 20px;
+}
+#icons li .fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+#fromToptoDown {
+   padding-top: 40px;
+}
+#content {
+    box-shadow: 3px 3px 3px 3px lavender;
+}
+#wider {
+    width: 300px;
+}
+blockquote span { 
+    display: block;
+    margin-top: 5px;
+    color: #999999;  
+}  
+blockquote span:before { 
+    content: "\2013 \00A0"; 
+} 
+.span12 { 
+    float: none;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+#back-to-top {
+    position: fixed;
+    z-index: 1010;
+    right: -40px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #111;
+    color: #fafafa;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;	
+    text-decoration: none;				
+    opacity: 0.5;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.responsive-img {
+    width: 250px;
+    height: 250px;
+}

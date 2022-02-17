@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+#navbar-change {
+    background: rgba(0, 0, 0, 0.6);
+}
+.nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+#icons {
+    list-style-type: none;
+}
+#icons li {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#icons li .fa-facebook {
+    color: blue;
+    font-size: 20px;
+}
+#icons li .fa-instagram {
+    color: rgb(112, 7, 7);
+    font-size: 20px;
+}
+#icons li .fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+#fromToptoDown {
+   padding-top: 40px;
+}
+#wider {
+    width: 300px;
+}
+blockquote span { 
+    display: block;
+    margin-top: 5px;
+    color: #999999;  
+}
+.responsive-img1 {
+    margin-left: 70px;
+    height: 400px;
+    width: 400px;
+    margin-top: 30px;
+    border-radius: 5px;
+} 
+.responsive-img2 {
+    margin-right: 50px;
+    height: 500px;
+    width: 500px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.responsive-img1:hover {
+    transition-delay: initial;
+    transform: scale(1.05);
+    transition: all 0.5s;
+    cursor: pointer;
+} 
+.responsive-img {
+    width: 250px;
+    height: 250px;
+}
+.responsive-img3 {
+    width: 300px;
+    height: 250px;
+}
+.responsive-img3:hover {
+    transform: rotate(10deg);
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.responsive-img4 {
+    width: 500px;
+    height: 500px;
+    margin-left: 300px;
+}
+.favicon {
+    width: 100px;
+    height: 100px;
+}
+.cert-space {
+    margin-top: 100px;
+}
+.enroll-field {
+    background-image: url(/images/award1.jpg);
+    background-position: cover;
+    height: 200px;   
+}
+.enroll-text {
+    color: #fff;
+    margin-top: 50px;
+}
+.developer {
+    color: #fff;
+    margin-top: 40px;
+    font-size: 14px;
+    letter-spacing: 2;
+}
+form {
+    box-shadow: 3px 10px 10px 10px lavender;
+    width: 600px;
+    height: 500px;
+}
+input[type="text"], input[type="password"], input[type="number"], input[type="email"]{
+    width: 450px;
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+    background-color: lavender;
+    outline: none;
+    margin-left: -70px;
+}
+input[type="submit"] {
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: green; 
+    color: #fff;
+    border: none;
+}
+.contact-heading{
+	background-image: url(/images/b19.jpg);
+    height: 70vh;
+}
+.contact-heading .text-content h4 {
+	color: #f33f3f;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+/* Responsive Design */
+@media screen and (max-width: 320px) {
+    .container, .animate,  .founder-section {
+        flex-wrap: wrap;
+        align-items: center;
+    }  
+    .cert-section {
+        width: 100%;
+    }
+    .founder-section {
+        width: 100%;
+    }
+    .responsive-img2 {
+        width: 270px;
+        height: 270px;
+        margin-left: 50px;
+    }
+    .responsive-img1 {
+        width: 230px;
+        height: 250px;
+        margin-left: -10px;
+    }
+    .news-letter {
+        display: none;
+    }
+    .developer {
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .enroll-field{
+        height: 150px;
+        margin-top: 20px;
+    }
+    .enroll-text {
+        font-size: 16px;
+    }
+ .partners-slider, .investors {
+        display: none;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 575px){
+    .container, .animate, .cert-section, .partners-slider, .investors{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .responsive-img {
+        width: 350px;
+        height: 350px; 
+    }
+    .responsive-img2 {
+        width: 350px;
+        height: 350px;
+        margin-left: 50px;
+    }
+    .responsive-img1 {
+        width: 350px;
+        height: 350px;
+        margin-left: -5px;
+    }
+
+   .enroll-field{
+       height: 200px;
+       margin-top: 20px;
+   }
+}
+@media screen and (min-width: 537px) and (max-width: 700px){
+    .container, .animate, .cert-section, .footer{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav-link {
+        font-size: 12px;
+    }
+    .partners-slider {
+        display:none;
+    }
+    #icons li a {
+        display: none;
+    }
+    .responsive-img1 {
+        width: 500px;
+        height: 500px;
+        margin-left: -10px;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1024px){
+    .container, .animate, .cert-section, .footer{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .partners-slider, .investors {
+        display: none;
+    }
+    .responsive-img {
+     width: 200px;
+    }
+    .responsive-img1 {
+        width: 700px;
+        height: 700px;
+        margin-left: -10px;
+    }
+    .responsive-img2 {
+        width: 700px;
+        margin-left: 50px;
+        
+    }
+    .nav-link {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .news-letter {
+        display: none;
+    }
+}
