@@ -6,7 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 #navbar-change {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
 }
 .nav-link {
     color: #fff;
@@ -64,9 +64,20 @@ blockquote span {
     transition: all 0.5s;
     cursor: pointer;
 } 
+.row:hover {
+    background: lavender;
+    transition: all .5s;
+    height: 300px;
+    width: 300px;  
+}
 .responsive-img {
     width: 250px;
     height: 250px;
+}
+.responsive-img:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+    opacity: 0.6;
 }
 .responsive-img3 {
     width: 300px;
@@ -105,23 +116,37 @@ blockquote span {
     font-size: 14px;
     letter-spacing: 2;
 }
-form {
-    box-shadow: 3px 10px 10px 10px lavender;
-    width: 600px;
+.kalybos {
     height: 500px;
 }
-input[type="text"], input[type="password"], input[type="number"], input[type="email"]{
-    width: 450px;
-    height: 50px;
+form {
+    width: 500px;
+    height: 500px;
+}
+input[type="text"], 
+input[type="password"], 
+input[type="number"], 
+input[type="email"]{
+    width: 400px;
+    height: 45px;
     border-radius: 5px;
     border:none;
     background-color: lavender;
     outline: none;
-    margin-left: -70px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+textarea {
+    width: 400px;
+    height: 200px;
+    background-color: lavender;
+    border: none;
+    border-radius: 5px;
 }
 input[type="submit"] {
     width: 400px;
-    height: 50px;
+    height: 45px;
     border-radius: 5px;
     background-color: green; 
     color: #fff;
@@ -129,23 +154,43 @@ input[type="submit"] {
 }
 .contact-heading{
 	background-image: url(/images/b19.jpg);
-    height: 70vh;
-}
-.contact-heading .text-content h4 {
-	color: #f33f3f;
-	font-size: 22px;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 15px;
+    height: 50vh;
 }
 /* Responsive Design */
 @media screen and (max-width: 320px) {
-    .container, .animate,  .founder-section {
+    .container, .animate,  .founder-section, .cert-section {
         flex-wrap: wrap;
         align-items: center;
     }  
-    .cert-section {
-        width: 100%;
+    .cert-section, .form {
+        width: 300px;
+    }
+    iframe {
+        height: 200px;
+        width: 280px;
+    }
+    .kalybos {
+        height: 250px;
+        width: 350px;
+    }
+    input[type="text"], 
+    input[type="password"], 
+    input[type="number"], 
+    input[type="email"]{
+        width: 325px;
+        text-align: center;
+        margin-left: 38px;
+    }
+    textarea {
+        height: 150px;
+        width: 362px;
+        text-align: center;
+        margin-right: -50px;
+    }
+    input[type="submit"] {
+        width: 325px;
+        justify-content: center;
+        margin-left: 35px;
     }
     .founder-section {
         width: 100%;
@@ -198,7 +243,26 @@ input[type="submit"] {
         height: 350px;
         margin-left: -5px;
     }
-
+    iframe {
+        height: 200px;
+        width: 300px;
+    }
+    .kalybos {
+        height: 250px;
+        width: 350px;
+    }
+    input[type="text"], 
+    input[type="password"], 
+    input[type="number"], 
+    input[type="email"]{
+        width: 300px;
+        text-align: center;
+        margin-left: 30px;
+    }
+    input[type="submit"] {
+        width: 300px;
+        justify-content: center;
+    }
    .enroll-field{
        height: 200px;
        margin-top: 20px;

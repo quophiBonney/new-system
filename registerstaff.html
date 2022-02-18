@@ -57,7 +57,7 @@
   <a class="nav-link dropdown-toggle active" href="staff.html" role="button" data-toggle="dropdown"><i class="fa-solid fa-user">Staff Members</i></a>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="payment.html">Pay Fees</a></li>
-    <li><a class="dropdown-item" href="registerstaff.html">Register Staff</a></li>
+    <li><a class="dropdown-item" href="registerstaff.html" onclick="registerFun();">Register Staff</a></li>
     <li><a class="dropdown-item" href="staffmembers.html">Staff Members</a></li>
   </ul>
   </li>
@@ -76,36 +76,42 @@
 </div>
 </div>
 </nav>
-    <!-- Page Content -->
-      <div class="container-fluid">
-        <img src="images/k.jpg" class="w-100">
-        </div>
-    
+<div class="page-heading contact-heading header-text">
+</div>
 <div class="container cert-space"></div>
-<div class="container justify-content-center my-4 p- registration-form">
+<div class="container-fluid d-flex p-3  mt-4 justify-content-center cert-section">
+  <div class="row">
+    <div class="col mr-3">
+      <img class="kalybos" src="images/Kalybos-construction-works-regnant-properties.png"/>
+    </div>
+    </div>
   <div class="row">
     <div class="col">
-      <center>
-      <form action="registerstaff.php" method="post">
-        <h3 class="text-center text-success">REGISTER NEW STAFF MEMBER</h3>
-        <div class="form-group p-2 w-50">
-          <input type="text" name="staffName" placeholder="Full Name" required="" class="form-control">
+        <form action="registerstaff.php" method="post">
+          <h3 class="text-center text-success">WRITE TO US</h3>
+          <hr>
+          <div class="form-group ml-4 w-50">
+            <input type="text" name="staffName" placeholder="Full Name" required="" class="form-control">
+          </div>
+          <div class="form-group ml-4 w-50">
+            <input type="email" name="email" placeholder="Email" required="" class="form-control">
+          </div>
+          <div class="form-group ml-4 w-50">
+            <input type="number" name="contact" placeholder="Mobile" required="" class="form-control">
+          </div>
+          <div class="form-group p-2 ml-5 w-50 contact-submit">
+          <input type="submit" name="register" value="submit" />
         </div>
-        <div class="form-group p-2 w-50">
-          <input type="email" name="email" placeholder="Email" required="" class="form-control">
-        </div>
-        <div class="form-group p-2 w-50">
-          <input type="number" name="contact" placeholder="Mobile" required="" class="form-control">
-        </div>
-        <div class="form-group p-2 w-50">
-          <input type="text" name="department" placeholder="Department" required="" class="form-control">
-        </div>
-        <input class="justify-content-center" type="submit" name="register" value="REGISTER" />
-        </center>
-      </form>
-  </div>
-  </div>
-</di
+        <ul class="ml-auto justify-content-center d-flex" id="icons">
+          <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+        </form>
+    </div>
+    </div>
+    </div>
+
 <div class="container cert-space"></div>
 <div class="container justify-content-center">
 <h4 class="text-center">GALLERY & EVENTS</h4>
@@ -145,16 +151,13 @@
   </div>
 
 <script>
-function registerstaff() {
-var response = "Are you the admin?";
-var reply = "yes";
-var password = "admin";
- prompt(response);
- if(reply == "yes"){
-   prompt("Type password");
- }else{
-   alert("You can't register a staff");
- }
+function registerFun() {
+var name = "admin";
+if(name == "admin") {
+  alert("You can register a staff member");
+}else {
+  alert("You can't register a staff member");
+}
 }
 </script>
 </body>
