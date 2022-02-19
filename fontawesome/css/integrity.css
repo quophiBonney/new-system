@@ -64,12 +64,6 @@ blockquote span {
     transition: all 0.5s;
     cursor: pointer;
 } 
-.row:hover {
-    background: lavender;
-    transition: all .5s;
-    height: 300px;
-    width: 300px;  
-}
 .responsive-img {
     width: 250px;
     height: 250px;
@@ -127,8 +121,8 @@ input[type="text"],
 input[type="password"], 
 input[type="number"], 
 input[type="email"]{
-    width: 400px;
-    height: 45px;
+    width: 500px;
+    height: 60px;
     border-radius: 5px;
     border:none;
     background-color: lavender;
@@ -136,73 +130,87 @@ input[type="email"]{
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 20px;
+}
+input[type="file"] {
+    width: 500px;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 20px;
 }
 textarea {
-    width: 400px;
+    width: 500px;
     height: 200px;
     background-color: lavender;
     border: none;
     border-radius: 5px;
+    text-align: center;
+}
+textarea .placeholder {
+    font-size: 20px;
 }
 input[type="submit"] {
-    width: 400px;
+    width: 500px;
     height: 45px;
     border-radius: 5px;
     background-color: green; 
     color: #fff;
     border: none;
 }
-.contact-heading{
-	background-image: url(/images/b19.jpg);
-    height: 50vh;
-}
 /* Responsive Design */
 @media screen and (max-width: 320px) {
-    .container, .animate,  .founder-section, .cert-section {
+    .container, .animate, .founder-section, .cert-section {
         flex-wrap: wrap;
         align-items: center;
+        min-width: 100%;
     }  
     .cert-section, .form {
-        width: 300px;
+        width: 250px;
     }
     iframe {
         height: 200px;
-        width: 280px;
+        width: 250px;
     }
     .kalybos {
         height: 250px;
-        width: 350px;
+        width: 250px;
+    }
+    .form, h3 {
+        margin-right: 20px;
     }
     input[type="text"], 
     input[type="password"], 
     input[type="number"], 
-    input[type="email"]{
-        width: 325px;
+    input[type="email"],
+    input[type="file"], 
+    .checkout {
+        width: 250px;
         text-align: center;
-        margin-left: 38px;
     }
     textarea {
         height: 150px;
-        width: 362px;
+        width: 250px;
         text-align: center;
-        margin-right: -50px;
     }
     input[type="submit"] {
-        width: 325px;
+        width: 250px;
         justify-content: center;
-        margin-left: 35px;
     }
     .founder-section {
         width: 100%;
     }
+    .responsive-img {
+        width: 200px;
+        height: 200px;
+    }
     .responsive-img2 {
-        width: 270px;
-        height: 270px;
-        margin-left: 50px;
+        width: 200px;
+        height: 200px;
+        margin-left: 30px;
     }
     .responsive-img1 {
-        width: 230px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         margin-left: -10px;
     }
     .news-letter {
@@ -220,58 +228,61 @@ input[type="submit"] {
     .enroll-text {
         font-size: 16px;
     }
- .partners-slider, .investors {
-        display: none;
-    }
 }
 @media screen and (min-width: 321px) and (max-width: 575px){
-    .container, .animate, .cert-section, .partners-slider, .investors{
+    .container, .animate,  .cert-section {
         flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     .responsive-img {
-        width: 350px;
-        height: 350px; 
+        width: 200px;
+        height: 200px; 
     }
     .responsive-img2 {
-        width: 350px;
-        height: 350px;
+        width: 200px;
+        height: 200px;
         margin-left: 50px;
     }
     .responsive-img1 {
-        width: 350px;
-        height: 350px;
+        width: 200px;
+        height: 200px;
         margin-left: -5px;
     }
     iframe {
         height: 200px;
         width: 300px;
     }
-    .kalybos {
-        height: 250px;
-        width: 350px;
-    }
     input[type="text"], 
     input[type="password"], 
     input[type="number"], 
-    input[type="email"]{
-        width: 300px;
+    input[type="email"], 
+    input[type="file"],
+    button{
+        width: 350px;
         text-align: center;
-        margin-left: 30px;
+        margin-left: 80px;
+    }
+    .textarea {
+      width: 300px;
+      margin-left: 50px;
     }
     input[type="submit"] {
-        width: 300px;
+        width: 350px;
         justify-content: center;
+        margin-left: 80px;
     }
    .enroll-field{
        height: 200px;
        margin-top: 20px;
    }
 }
-@media screen and (min-width: 537px) and (max-width: 700px){
+@media screen and (min-width: 576px) and (max-width: 700px){
     .container, .animate, .cert-section, .footer{
         flex-wrap: wrap;
         align-items: center;
+        text-align: center;
     }
     .nav-link {
         font-size: 12px;
