@@ -40,10 +40,11 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="classes.html" role="button" data-toggle="dropdown"><i class="fa-solid fa-graduation-cap">Classes</i></a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="creche.html">Creche</a></li>
-      <li><a class="dropdown-item" href="kg.html">KG</a></li>
-      <li><a class="dropdown-item" href="primary.html">Primary</a></li>
-      <li><a class="dropdown-item" href="jhs.html">JHS</a></li>
+      <li><a class="dropdown-item" href="creche.html" onclick="myFunc();">Creche</a></li>
+      <li><a class="dropdown-item" href="kg.html" onclick="myFunc();">KG</a></li>
+      <li><a class="dropdown-item" href="primary.html" onclick="myFunc();">Primary</a></li>
+      <li><a class="dropdown-item" href="jhs.html"  onclick="myFunc();">JHS</a></li>
+      <li><a class="dropdown-item" href="student_portal.html" onclick="myFunc();">Student Portal</a></li>
     </ul>
   </li>
   <li class="nav-item dropdown">
@@ -104,74 +105,56 @@
   </button>
 </div>
 <div class="container cert-space"></div>
-    <div class="col">
-      <div class="container border d-flex justify-content-center cert-section">
-        <div class="row">
-          <div class="col">
-            <h3 class="text-center">PAYMENT FORM</h3>
-            <hr>
-                 <form action="/create-checkout-session" method="POST">
-                        <div class="form-group w-50">
-                          <input type="text" name="student_idd" placeholder="Student ID" class="form-control">
-                        </div>
-                        <div class="form-group w-50">
-                          <input type="text" name="studentName" placeholder="Student Name"  class="form-control">
-                        </div>
-                        <div class="form-group w-50">
-                          <input type="text" name="class" placeholder="Class/Course" class="form-control">
-                        </div>
-                        <div class="form-group w-50">
-                          <input type="text" name="wardName" placeholder="Parent Name"  class="form-control">
-                        </div>
-                        <div class="form-group w-50">
-                          <input type="number" name="amount" placeholder="&#8373;1500.00"  class="form-control">
-                        </div>
-                        <div class="form-group w-50 contact-sumbit">
-                        <input type="submit" name="check" value="PAY NOW" />
-                      </div>
-                      </form>
-          </div>
-        </div>
+<div class="container justify-content-center my-4 p-3">
+  <hr>
   <div class="row">
-    <div class="col">
-      <img class="responsive-img1 p-3" src="images/men1.png" alt="">
-    </div>
-  </div>
-  </div>
-<div class="container cert-space"></div>
-<div class="container-fluid justify-content-center enroll-field">
-  <div class="container text-center" id="enroll-section">
-  <h4 class="p-3 enroll-text">Do you want to enroll in the best school?</h4>
-  <button class="btn btn-success">Enroll Now</button>
-  <br>
-  <p class="text-center developer">ALL RIGHTS RESERVED &copy; 2022<br>
-    DEVELOPED BY QUOPHI CLEF</p>
-</div>
+    <div class="col-md-6">
+      <div class="payment-info">
+        <img class="founder-img" src="images/Kalybos-construction-works-regnant-properties.png" alt="">
+      </div>
+    </div>    
+    <div class="col-md-6 p-3">
+      <div class="founder-info">
+        <h3 class="text-center">PAYMENT FORM</h3>
+        <hr>
+        <form action="/create-checkout-session" method="POST">
+          <center>
+          <div class="form-group w-100">
+            <input type="text" name="student_idd" placeholder="Student ID" class="form-control">
+          </div>
+          <div class="form-group w-100">
+            <input type="text" name="studentName" placeholder="Student Name"  class="form-control">
+          </div>
+          <div class="form-group w-100">
+            <input type="text" name="class" placeholder="Class/Course" class="form-control">
+          </div>
+          <div class="form-group w-100">
+            <input type="text" name="wardName" placeholder="Parent Name"  class="form-control">
+          </div>
+          <div class="form-group w-100">
+            <input type="number" name="amount" placeholder="&#8373;1500.00"  class="form-control">
+          </div>
+          <div class="form-group w-100 contact-sumbit">
+            <input type="submit" name="check" value="PAY NOW" />
+          </div>
+      </center>
+        </form>
+      </div>
+      </div>
+      </div>
+      </div>
+<div class="container-fluid footer-section">
+  <h6 class="text-center">All Rights Reserved &copy; 2022<br>
+  Borex Institute Of Technology<br><br>
+Developed & Designed By Quophi & Frank<br>
+0547998061 / 0247202968</h6>
 </div>
 
+<!--JavaScript Code -->
 <script>
-var acc = document.getElementsByClassName("expand");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-acc[i].addEventListener("click", function() {
-/* Toggle between adding and removing the "active" class,
-to highlight the button that controls the panel */
-this.classList.toggle("active");
-
-/* Toggle between hiding and showing the active panel */
-var panel = this.nextElementSibling;
-if (panel.style.display === "block") {
-panel.style.display = "none";
-} else {
-panel.style.display = "block";
-}
-});
-}
-function myFunction() {
-	var animate = getElementById("popup");
-	popup.classList.toggle("show");
-}
+  function myFunc() {
+    alert("Not yet developed");
+  }
 </script>
   </body>
   </html>

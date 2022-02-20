@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
@@ -5,14 +8,9 @@ body {
 html {
     scroll-behavior: smooth;
 }
-#navbar-change {
-    background: rgba(0, 0, 0, 0.3);
-}
-.nav-link {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+.favicon {
+    width: 100px;
+    height: auto;
 }
 #icons {
     list-style-type: none;
@@ -33,281 +31,58 @@ html {
     color: red;
     font-size: 20px;
 }
-#fromToptoDown {
-   padding-top: 40px;
+.founder-img {
+    width: 100%;
+    height: 500px;
 }
-#wider {
-    width: 300px;
+.awards-img {
+    width: 100%;
+    height: 250px;
 }
-blockquote span { 
-    display: block;
-    margin-top: 5px;
-    color: #999999;  
+.awards-img:hover {
+    transition: all .5s;
+    transform: scale(1.1);
+    cursor: pointer;
+    opacity: 0.7;
 }
-.responsive-img1 {
-    margin-left: 70px;
+.students-img {
+    width: 100%;
     height: 400px;
-    width: 400px;
-    margin-top: 30px;
-    border-radius: 5px;
-} 
-.responsive-img2 {
-    margin-right: 50px;
-    height: 500px;
-    width: 500px;
-    margin-top: 30px;
-    border-radius: 10px;
 }
-.responsive-img {
-    width: 250px;
-    height: 250px;
-}
-.responsive-img3 {
-    width: 300px;
-    height: 250px;
-}
-.responsive-img4 {
-    width: 500px;
-    height: 500px;
-    margin-left: 300px;
-}
-.favicon {
-    width: 100px;
-    height: 100px;
-}
-.cert-space {
-    margin-top: 100px;
-}
-.enroll-field {
-    background-image: url(/images/award1.jpg);
-    background-position: cover;
-    height: 200px;   
-}
-.enroll-text {
-    color: #fff;
-    margin-top: 50px;
-}
-.developer {
-    color: #fff;
-    margin-top: 40px;
-    font-size: 14px;
-    letter-spacing: 2;
-}
-.kalybos {
-    height: 500px;
+iframe {
+    width: 100%;
+    height: 300px;
 }
 form {
-    width: 500px;
+    width: 100%;
     height: 500px;
 }
-input[type="text"], 
-input[type="password"], 
-input[type="number"], 
-input[type="email"]{
-    width: 500px;
+input[type="text"], input[type="email"], input[type="number"]{
+    text-align: center;
+    background:lavender;
     height: 60px;
     border-radius: 5px;
-    border:none;
-    background-color: lavender;
-    outline: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 20px;
+    min-width: 100%;
+}
+.textarea {
+    background: lavender;
+    height: 400px;
 }
 input[type="file"] {
-    width: 500px;
-    height: 60px;
-    border-radius: 5px;
-    font-size: 20px;
-}
-textarea {
-    width: 500px;
-    height: 200px;
-    background-color: lavender;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-}
-textarea .placeholder {
-    font-size: 20px;
+    height: 50px;
+    border: 1px solid rgb(149, 15, 38);
 }
 input[type="submit"] {
-    width: 500px;
-    height: 45px;
+    height: 60px;
     border-radius: 5px;
-    background-color: green; 
+    min-width: 100%;
+    background:green; 
+    border: 1px solid green;  
     color: #fff;
-    border: none;
+    font-weight: bold;
 }
-/* Responsive Design */
-@media screen and (max-width: 320px) {
-    .container, .animate, .founder-section, .cert-section {
-        flex-wrap: wrap;
-        align-items: center;
-        min-width: 100%;
-    }  
-    .cert-section, .form {
-        width: 250px;
-    }
-    iframe {
-        height: 200px;
-        width: 250px;
-    }
-    .kalybos {
-        height: 250px;
-        width: 250px;
-    }
-    .form, h3 {
-        margin-right: 20px;
-    }
-    input[type="text"], 
-    input[type="password"], 
-    input[type="number"], 
-    input[type="email"],
-    input[type="file"], 
-    .checkout {
-        width: 250px;
-        text-align: center;
-    }
-    textarea {
-        height: 150px;
-        width: 250px;
-        text-align: center;
-    }
-    input[type="submit"] {
-        width: 250px;
-        justify-content: center;
-    }
-    .founder-section {
-        width: 100%;
-    }
-    .responsive-img {
-        width: 200px;
-        height: 200px;
-    }
-    .responsive-img2 {
-        width: 200px;
-        height: 200px;
-        margin-left: 30px;
-    }
-    .responsive-img1 {
-        width: 200px;
-        height: 200px;
-        margin-left: -10px;
-    }
-    .news-letter {
-        display: none;
-    }
-    .developer {
-        font-size: 10px;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-    .enroll-field{
-        height: 150px;
-        margin-top: 20px;
-    }
-    .enroll-text {
-        font-size: 16px;
-    }
-}
-@media screen and (min-width: 321px) and (max-width: 575px){
-    .container, .animate,  .cert-section {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .responsive-img {
-        width: 200px;
-        height: 200px; 
-    }
-    .responsive-img2 {
-        width: 200px;
-        height: 200px;
-        margin-left: 50px;
-    }
-    .responsive-img1 {
-        width: 200px;
-        height: 200px;
-        margin-left: -5px;
-    }
-    iframe {
-        height: 200px;
-        width: 300px;
-    }
-    input[type="text"], 
-    input[type="password"], 
-    input[type="number"], 
-    input[type="email"], 
-    input[type="file"],
-    button{
-        width: 350px;
-        text-align: center;
-        margin-left: 80px;
-    }
-    .textarea {
-      width: 300px;
-      margin-left: 50px;
-    }
-    input[type="submit"] {
-        width: 350px;
-        justify-content: center;
-        margin-left: 80px;
-    }
-   .enroll-field{
-       height: 200px;
-       margin-top: 20px;
-   }
-}
-@media screen and (min-width: 576px) and (max-width: 700px){
-    .container, .animate, .cert-section, .footer{
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: center;
-    }
-    .nav-link {
-        font-size: 12px;
-    }
-    .partners-slider {
-        display:none;
-    }
-    #icons li a {
-        display: none;
-    }
-    .responsive-img1 {
-        width: 500px;
-        height: 500px;
-        margin-left: -10px;
-    }
-}
-@media screen and (min-width: 701px) and (max-width: 1024px){
-    .container, .animate, .cert-section, .footer{
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    .partners-slider, .investors {
-        display: none;
-    }
-    .responsive-img {
-     width: 200px;
-    }
-    .responsive-img1 {
-        width: 700px;
-        height: 700px;
-        margin-left: -10px;
-    }
-    .responsive-img2 {
-        width: 700px;
-        margin-left: 50px;
-        
-    }
-    .nav-link {
-        font-size: 12px;
-        font-weight: bold;
-    }
-    .news-letter {
-        display: none;
-    }
+.footer-section {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
 }

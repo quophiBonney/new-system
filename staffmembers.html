@@ -40,10 +40,11 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="classes.html" role="button" data-toggle="dropdown"><i class="fa-solid fa-graduation-cap">Classes</i></a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="creche.html">Creche</a></li>
-      <li><a class="dropdown-item" href="kg.html">KG</a></li>
-      <li><a class="dropdown-item" href="primary.html">Primary</a></li>
-      <li><a class="dropdown-item" href="jhs.html">JHS</a></li>
+      <li><a class="dropdown-item" href="creche.html" onclick="myFunc();">Creche</a></li>
+      <li><a class="dropdown-item" href="kg.html" onclick="myFunc();">KG</a></li>
+      <li><a class="dropdown-item" href="primary.html" onclick="myFunc();">Primary</a></li>
+      <li><a class="dropdown-item" href="jhs.html"  onclick="myFunc();">JHS</a></li>
+      <li><a class="dropdown-item" href="student_portal.html" onclick="myFunc();">Student Portal</a></li>
     </ul>
   </li>
   <li class="nav-item dropdown">
@@ -70,66 +71,73 @@
 </div>
 </nav>
 <body>
-<div class="container justify-content-center p-3 mt-4">
-  <table class="table">
-    <thead>
-        <tr class="text-center">
-            <th>STAFF NAME</th>
-            <th>EMAIL</th>
-            <th>CONTACT</th>
-            <th>DEPARTMENT</th>
-            <th>STAFF'S IMAGE</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        $conn = mysqli_connect("localhost", "root", "", "staff");
-        $sql = "SELECT id, staffName, email, contact, department, image FROM registration";
-        $query = mysqli_query($conn, $sql);
-        
-        if(mysqli_num_rows($query) > 0) {
-          while($row = mysqli_fetch_assoc($query)){
-              ?>
-        <tr class="text-center">
-
-            <td><?php echo $row['staffName'];?></td>
-            <td><?php echo $row['email'];?></td>
-            <td><?php echo $row['contact'];?></td>
-            <td><?php echo $row['department'];?></td>
-            <td><?php echo $row['image'];?</td>
-            <td>
-                <form action="edit-data.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
-                    <button type="submit" name="edit" class="btn btn-danger">Delete</button>
-                </form>
-            </td>
-
-            <script>
-            function deleteData(id) {
-                if (confirm("Are you sure you want to delete this data?")) {
-                    window.location.href = 'delete.data.php?del_id=' + id + '';
+  <div class="container justify-content-center my-4 p-3">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="awards-message">
+          <h4 class="text-center">STAFF MEMBERS</h4>
+          <hr>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+            <tr class="text-center">
+                <th>STAFF NAME</th>
+                <th>EMAIL</th>
+                <th>CONTACT</th>
+                <th>DEPARTMENT</th>
+                <th>STAFF'S IMAGE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $conn = mysqli_connect("localhost", "root", "", "staff");
+            $sql = "SELECT id, staffName, email, contact, department, image FROM registration";
+            $query = mysqli_query($conn, $sql);
+            
+            if(mysqli_num_rows($query) > 0) {
+              while($row = mysqli_fetch_assoc($query)){
+                  ?>
+            <tr class="text-center">
+    
+                <td><?php echo $row['staffName'];?></td>
+                <td><?php echo $row['email'];?></td>
+                <td><?php echo $row['contact'];?></td>
+                <td><?php echo $row['department'];?></td>
+                <td><?php echo $row['image'];?</td>
+                <td>
+                    <form action="edit-data.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                        <button type="submit" name="edit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+    
+                <script>
+                function deleteData(id) {
+                    if (confirm("Are you sure you want to delete this data?")) {
+                        window.location.href = 'delete.data.php?del_id=' + id + '';
+                    }
                 }
+                </script>
+            </tr>
+            <?php
+              }
             }
-            </script>
-        </tr>
-        <?php
-          }
-        }
-        ?>
-    </tbody>
-</table>  
+            ?>
+        </tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+<div class="container justify-content-center p-3 mt-4">
+    
 </div>
-<div class="container cert-space"></div>
-<div class="container-fluid justify-content-center enroll-field">
-  <div class="container text-center" id="enroll-section">
-  <h4 class="p-3 enroll-text">Do you want to enroll in the best school?</h4>
-  <button class="btn btn-success">Enroll Now</button>
-  <br>
-  <p class="text-center developer">ALL RIGHTS RESERVED &copy; 2022<br>
-    DEVELOPED BY QUOPHI CLEF</p>
-</div>
+<div class="container-fluid footer-section">
+  <h6 class="text-center">All Rights Reserved &copy; 2022<br>
+  Borex Institute Of Technology<br><br>
+Developed & Designed By Quophi & Frank<br>
+0547998061 / 0247202968</h6>
 </div>
 </body>
 </html>
